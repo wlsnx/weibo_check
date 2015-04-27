@@ -6,14 +6,12 @@
     <body>
         <div class="panel panel-default">
             <div class="panel-heading">
-            正在抓取的UID
-            {% if uid_list %}
+                <label class="col-md-offset-2">正在抓取的UID</label>
                 <span class="badge">{{ uid_list|length }}</span>
-            {% endif %}
             </div>
             <div class="panel-body">
                 {% if uid_list %}
-                    <ul class="list-group">
+                    <ul class="list-group col-md-offset-2">
                         {% for uid in uid_list %}
                             <li class="list-group-item">
                                 <a href="http://weibo.com/{{ uid }}">{{ uid }}</a>
@@ -21,7 +19,7 @@
                         {% endfor %}
                     </ul>
                 {% else %}
-                    <label>无</label>
+                    <label class="col-md-offset-2">无</label>
                 {% endif %}
             </div>
         </div>
@@ -50,9 +48,9 @@
                 </div>
                 {% if image %}
                     <div class="form-group">
-                        <img src="{{ image }}">
                         <label class="control-label col-md-2">验证码</label>
-                        <div class="col-md-10">
+                        <img src="{{ image }}">
+                        <div class="col-md-2">
                             <input type="text" name="door" class="form-control"></input>
                         </div>
                     </div>
