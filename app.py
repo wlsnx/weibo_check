@@ -84,7 +84,7 @@ def weibo():
                                    image=base64_image)
         else:
             if not wb.login():
-                return redirect(url_for("weibo"))
+                return redirect(url_for("weibo", **args))
 
     user = user.split(",") if user else []
     uid = uid.split(",") if uid else []
